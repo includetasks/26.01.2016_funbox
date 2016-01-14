@@ -41,8 +41,12 @@ DOWNLOADED: http://www.advantika.ru:80/upload/iblock/031/031f798efb6283b521734a1
 DOWNLOADED: http://www.advantika.ru:80/upload/iblock/0ba/0bab74ff89b8224fe9462d691f1c1a35.png
 ```
 
-**Реализация**: 
-- имплементация: [GitLink]()
-- пример использования: [GitLink]()
+**Реализация**:
+ 
+- имплементация: [GitLink](https://github.com/tasksfromfb/tffb/tree/master/lib)
+  - [Grubbers](https://github.com/tasksfromfb/tffb/blob/master/lib/grubbers.rb)
+  - [ConsoleTool](https://github.com/tasksfromfb/tffb/blob/master/lib/grubbers/image_grubber/console_tool.rb)
+  - [ImageGrubber](https://github.com/tasksfromfb/tffb/blob/master/lib/grubbers/image_grubber/grubber.rb)
+- пример использования: [GitLink](https://github.com/tasksfromfb/tffb/blob/master/scripts/grubber.rb)
 
 ---

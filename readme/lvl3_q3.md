@@ -16,7 +16,9 @@
 
 Я представил каждый параметр как коллекцию индексированных множеств, где индекс множества - это значение параметра, а само множество - набор идентификаторов объектов с соответствующим значением параметра.
 
-В итоге получаем, что параметр - это набор множеств, и каждое множество связано с отдельным значением параметра [иллюстрация от руки](http://).
+В итоге получаем, что параметр - это набор множеств, и каждое множество связано с отдельным значением параметра.
+
+**Иллюстрация**:
 
 Отдельный объект может принадлежать разным множествам согласно своим различным параметрам. Напрмер: объект со значениями {age: 10, height: 20} принадлежит множеству Age[10] и множеству Height[20].
 
@@ -59,7 +61,14 @@ HEIGHT { 15 => [0],   22 => [1], 23 => [2] }
 Как видим, операция поиска полностью свелась к выбору нужных множеств и к операциям над ними, тем самым получая идентификаторы нужных объектов напрямую.
 Иными словами, сразу берем то, что нам нужно :)
 
-***Реализация***: [GitLink]()
+***Реализация***:
+
+- имплементация: [GitLink](https://github.com/tasksfromfb/tffb/tree/master/lib)
+  - [LazyDataSet](https://github.com/tasksfromfb/tffb/blob/master/lib/search_engine/LazyDataSet.rb)
+  - [SearchModule](https://github.com/tasksfromfb/tffb/blob/master/lib/search_engine.rb)
+  - [Searcher](https://github.com/tasksfromfb/tffb/blob/master/lib/search_engine/Searcher.rb)
+  - [FloatySearcher](https://github.com/tasksfromfb/tffb/blob/master/lib/search_engine/FloatySearcher.rb)
+- пример использования: [GitLink](https://github.com/tasksfromfb/tffb/blob/master/scripts/searcher.rb)
 
 Имеем:
 

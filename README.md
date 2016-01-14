@@ -362,8 +362,11 @@ DOWNLOADED: http://www.advantika.ru:80/upload/iblock/0ba/0bab74ff89b8224fe9462d6
 
 **Реализация**:
 
--   имплементация: [GitLink]()
--   пример использования: [GitLink]()
+-   имплементация: [GitLink](https://github.com/tasksfromfb/tffb/tree/master/lib)
+-   [Grubbers](https://github.com/tasksfromfb/tffb/blob/master/lib/grubbers.rb)
+-   [ConsoleTool](https://github.com/tasksfromfb/tffb/blob/master/lib/grubbers/image_grubber/console_tool.rb)
+-   [ImageGrubber](https://github.com/tasksfromfb/tffb/blob/master/lib/grubbers/image_grubber/grubber.rb)
+-   пример использования: [GitLink](https://github.com/tasksfromfb/tffb/blob/master/scripts/grubber.rb)
 
 * * * * *
 
@@ -383,7 +386,7 @@ DOWNLOADED: http://www.advantika.ru:80/upload/iblock/0ba/0bab74ff89b8224fe9462d6
 ruby ./spec/client_server/client_server.rb
 ~~~~
 
-[GitLink]()
+**Реализация**: [GitLink](https://github.com/tasksfromfb/tffb/tree/master/spec)
 
 * * * * *
 
@@ -434,7 +437,7 @@ ruby ./spec/client_server/client_server.rb
 -   если число в начале исходного массива = 1: пропущено число (array.last + 1);
 -   если число в начале исходного массива = 2: пропущено число 1.
 
-***Реализация***: [GitLink](https://github)
+***Реализация***: [GitLink](https://github.com/tasksfromfb/tffb/blob/master/scripts/miss_search.rb)
 
 * * * * *
 
@@ -443,6 +446,7 @@ ruby ./spec/client_server/client_server.rb
 * * * * *
 
 Я бы с удовольствием подискуссировал на эту тему после прочтения крутой книги Ruby Under Microscope, т.к. знаний очень очень мало, а чтением этой только только начинаю заниматься.
+
 Существуют следующие реализации Ruby: Rubinius, MRI, JRuby, RubyEnterprise, IronRuby, MacRuby (можем рабоать с Ruby на любой платформе nix/win). У каждой из них есть свои нюансы. Но остановлюсь на той, с которой работал - с оригинальной реализацией Ruby - MRI.
 
 Я сделал маленькую выжимку из того, что я успел узнать на данный момент из следующих докладов:
@@ -459,6 +463,7 @@ ruby ./spec/client_server/client_server.rb
 -   В MRI присутствует GIL (Global Interpreter Lock). GIL заставляет работать в единицу времени только один поток, от этого создается впечатление, что некоторые конструкции данных потоко-безопасны. Но запуск кода на других реализациях Ruby может вас удивить. JRuby и Rubinius в данном случае могут повести себя совсем по другому, т.к. они отдают управление потоками операционной системе. ЗАТО: MRI дает нам возможность работать с потоками даже в системах, которые их не поддерживают.
 
 Для ускорения работы можно поиграться с поведением Garbage Collector'а, изменяя его доступные параметры (все можно глянуть здесь: <https://github.com/ruby/ruby/blob/ruby_2_3/gc.c>) или вообще подменяя его другими реализациями. Описание некоторых параметров GC можно увидеть здесь: (<http://helabs.com/blog/2014/12/19/ruby-gc-tuning-parameters/>).
+
 К сожалению, я не силен в реализации Ruby, но, т.к. язык открытый, можно воспользоваться различными патчами/апдейтами для данного языка (скомпилить свою сборку). Или воспользоваться другими реализациями Ruby (JRuby, например), где вы сможете воспользоваться преимуществами выбранной реализации, а, заодно, и набором библиотек из её окружения.
 
 * * * * *
@@ -481,7 +486,9 @@ ruby ./spec/client_server/client_server.rb
 
 Я представил каждый параметр как коллекцию индексированных множеств, где индекс множества - это значение параметра, а само множество - набор идентификаторов объектов с соответствующим значением параметра.
 
-В итоге получаем, что параметр - это набор множеств, и каждое множество связано с отдельным значением параметра [иллюстрация от руки](http://).
+В итоге получаем, что параметр - это набор множеств, и каждое множество связано с отдельным значением параметра.
+
+**Иллюстрация**:
 
 Отдельный объект может принадлежать разным множествам согласно своим различным параметрам. Напрмер: объект со значениями {age: 10, height: 20} принадлежит множеству Age[10] и множеству Height[20].
 
@@ -524,7 +531,14 @@ HEIGHT { 15 => [0],   22 => [1], 23 => [2] }
 Как видим, операция поиска полностью свелась к выбору нужных множеств и к операциям над ними, тем самым получая идентификаторы нужных объектов напрямую.
 Иными словами, сразу берем то, что нам нужно :)
 
-***Реализация***: [GitLink]()
+***Реализация***:
+
+-   имплементация: [GitLink](https://github.com/tasksfromfb/tffb/tree/master/lib)
+-   [LazyDataSet](https://github.com/tasksfromfb/tffb/blob/master/lib/search_engine/LazyDataSet.rb)
+-   [SearchModule](https://github.com/tasksfromfb/tffb/blob/master/lib/search_engine.rb)
+-   [Searcher](https://github.com/tasksfromfb/tffb/blob/master/lib/search_engine/Searcher.rb)
+-   [FloatySearcher](https://github.com/tasksfromfb/tffb/blob/master/lib/search_engine/FloatySearcher.rb)
+-   пример использования: [GitLink](https://github.com/tasksfromfb/tffb/blob/master/scripts/searcher.rb)
 
 Имеем:
 

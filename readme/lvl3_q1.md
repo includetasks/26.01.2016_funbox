@@ -45,6 +45,6 @@
   - если число в начале исходного массива = 1: пропущено число (array.last + 1);
   - если число в начале исходного массива = 2: пропущено число 1.
 
-***Реализация***: [GitLink](https://github)
+***Реализация***: [GitLink](https://github.com/tasksfromfb/tffb/blob/master/scripts/miss_search.rb)
 
 ---
