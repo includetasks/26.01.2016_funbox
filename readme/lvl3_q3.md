@@ -64,10 +64,10 @@ HEIGHT { 15 => [0],   22 => [1], 23 => [2] }
 ***Реализация***:
 
 - имплементация: [GitLink](https://github.com/tasksfromfb/tffb/tree/master/lib)
-  - [LazyDataSet](https://github.com/tasksfromfb/tffb/blob/master/lib/search_engine/LazyDataSet.rb)
-  - [SearchModule](https://github.com/tasksfromfb/tffb/blob/master/lib/search_engine.rb)
-  - [Searcher](https://github.com/tasksfromfb/tffb/blob/master/lib/search_engine/Searcher.rb)
-  - [FloatySearcher](https://github.com/tasksfromfb/tffb/blob/master/lib/search_engine/FloatySearcher.rb)
+    - [LazyDataSet](https://github.com/tasksfromfb/tffb/blob/master/lib/search_engine/LazyDataSet.rb)
+    - [SearchModule](https://github.com/tasksfromfb/tffb/blob/master/lib/search_engine.rb)
+    - [Searcher](https://github.com/tasksfromfb/tffb/blob/master/lib/search_engine/Searcher.rb)
+    - [FloatySearcher](https://github.com/tasksfromfb/tffb/blob/master/lib/search_engine/FloatySearcher.rb)
 - пример использования: [GitLink](https://github.com/tasksfromfb/tffb/blob/master/scripts/searcher.rb)
 
 Имеем:
