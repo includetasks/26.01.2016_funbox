@@ -79,7 +79,7 @@ RSpec.describe Grubbers do
         end
 
         context 'after the download process' do
-          before { img_grubber.grub }
+          before { img_grubber.grub(false) }
           after  {
             img_grubber.output_files  = []
             img_grubber.passed_links  = []
