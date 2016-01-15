@@ -400,7 +400,7 @@
 **Пример работы:**
 
 ~~~~ {.bash}
-daiver@vaio ~/P/R/funbox> ruby ./scripts/grubber.rb -u http://www.advantika.ru/ -o ./tmp
+daiver@vaio ~/P/R/funbox>./scripts/grubber.rb -u http://www.advantika.ru/ -o ./tmp
 DOWNLOADED: http://www.advantika.ru:80/bitrix/templates/.default/images/logo.png
 DOWNLOADED: http://www.advantika.ru:80/upload/iblock/031/031f798efb6283b521734a16ce83fd9c.png
 ...много файлов...
