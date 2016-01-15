@@ -8,10 +8,10 @@ require 'addressable/uri'
 
 module Grubbers
   module ImageGrubber
-    class Grubber
-      ImageGrubberError = Class.new(StandardError)
-      GrubInitError     = Class.new(ImageGrubberError)
+    ImageGrubberError = Class.new(StandardError)
+    GrubInitError     = Class.new(ImageGrubberError)
 
+    class Grubber
       IMAGE_MIME_TYPES = [
         'image/x-windows-bmp',
         'image/vnd.dwg',
