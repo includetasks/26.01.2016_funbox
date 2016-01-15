@@ -14,6 +14,6 @@
 ruby ./spec/client_server/client_server.rb
 ```
 
-**Реализация**: [GitLink](https://github.com/tasksfromfb/tffb/tree/master/spec)
+**Реализация**: [GitLink](https://github.com/includetasks/include_tasks/tree/master/spec)
 
 ---

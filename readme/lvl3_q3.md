@@ -18,7 +18,7 @@
 
 В итоге получаем, что параметр - это набор множеств, и каждое множество связано с отдельным значением параметра.
 
-**Иллюстрация**: [GitLink](https://github.com/tasksfromfb/tffb/blob/master/illustration.png)
+**Иллюстрация**: [GitLink](https://github.com/includetasks/include_tasks/blob/master/illustration.png)
 
 Отдельный объект может принадлежать разным множествам согласно своим различным параметрам. Напрмер: объект со значениями {age: 10, height: 20} принадлежит множеству Age[10] и множеству Height[20].
 
@@ -63,12 +63,12 @@ HEIGHT { 15 => [0],   22 => [1], 23 => [2] }
 
 ***Реализация***:
 
-- имплементация: [GitLink](https://github.com/tasksfromfb/tffb/tree/master/lib)
-    - [LazyDataSet](https://github.com/tasksfromfb/tffb/blob/master/lib/search_engine/LazyDataSet.rb)
-    - [SearchModule](https://github.com/tasksfromfb/tffb/blob/master/lib/search_engine.rb)
-    - [Searcher](https://github.com/tasksfromfb/tffb/blob/master/lib/search_engine/Searcher.rb)
-    - [FloatySearcher](https://github.com/tasksfromfb/tffb/blob/master/lib/search_engine/FloatySearcher.rb)
-- пример использования: [GitLink](https://github.com/tasksfromfb/tffb/blob/master/scripts/searcher.rb)
+- имплементация: [GitLink](https://github.com/includetasks/include_tasks/tree/master/lib)
+    - [LazyDataSet](https://github.com/includetasks/include_tasks/blob/master/lib/search_engine/LazyDataSet.rb)
+    - [SearchModule](https://github.com/includetasks/include_tasks/blob/master/lib/search_engine.rb)
+    - [Searcher](https://github.com/includetasks/include_tasks/blob/master/lib/search_engine/Searcher.rb)
+    - [FloatySearcher](https://github.com/includetasks/include_tasks/blob/master/lib/search_engine/FloatySearcher.rb)
+- пример использования: [GitLink](https://github.com/includetasks/include_tasks/blob/master/scripts/searcher.rb)
 
 Имеем:
 
