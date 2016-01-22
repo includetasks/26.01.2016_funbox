@@ -1,5 +1,3 @@
-require 'nokogiri'
-require 'open-uri'
 require 'fileutils'
 require 'open3'
 
